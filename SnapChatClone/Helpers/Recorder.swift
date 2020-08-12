@@ -53,7 +53,7 @@ class ScreenRecorderService {
             currentFrameIndex += 1
             writeQueue?.async {
                 
-                guard let data = snapshot.jpegData(compressionQuality: 1) else {
+                guard let data = snapshot.jpegData(compressionQuality: 0.3) else {
                     return
                 }
                 let url = URL(fileURLWithPath: "\(ImagesToVideoUtils.path)/tempimage\(self.urls.count + 1).png")
